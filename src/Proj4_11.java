@@ -1,2 +1,1 @@
-public class Proj4_11 {
-}
+import javax.swing.*;import java.awt.*;public class Proj4_11 {public static void main(String[] args){JFrame frame=new JFrame("Project 4-11");frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);frame.setSize(400,400);frame.setVisible(true);Container container=frame.getContentPane();container.setLayout(new GridLayout(8,8));for(int i=0;i<8;i++){for(int j=0;j<8;j++){JPanel panel=new JPanel();if((i%2==1&&j%2==0)||(i%2==0&&j%2==1)) panel.setBackground(Color.BLACK);else panel.setBackground(Color.RED);frame.add(panel); }}}}
