@@ -1,7 +1,7 @@
 import images.APImage;
 import images.Pixel;
 
-public class SocketClient {
+    public class SocketClient {
         public static void main(String[] args)  {
             APImage apImage=new APImage("D:\\test2.png");
             apImage.draw();
@@ -21,13 +21,10 @@ public class SocketClient {
                     int blue = pix.getBlue();
                     int green = pix.getGreen();
                     if(isEdge(value,rightValue,downValue)){
-                        pix.setRed(Math.max(0,red-50));
-                        pix.setBlue(Math.max(0,blue-50));
-                        pix.setGreen(Math.max(0,green-50));
+                        pix.setRed(0);
+                        pix.setGreen(0);
+                        pix.setBlue(0);
                     }else{
-                        pix.setRed(Math.max(0,red));
-                        pix.setBlue(Math.max(0,blue));
-                        pix.setGreen(Math.max(0,green));
                     }
 
                 }
@@ -42,7 +39,7 @@ public class SocketClient {
             return Math.abs(a-b);
     }
     public static boolean isEdge(int value,int right,int down){
-            int a=10;
+            int a=30;
             if(absDiff(value,right)>a){
                 return true;
             }else if(absDiff(value,down)>a){
