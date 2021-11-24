@@ -21,8 +21,11 @@ public class Proj7_8{
 
         if(sent.length()!=0){
             count++;
+            if(sent.charAt(loc1)==' ')
+                loc1++;
             totLength+=sent.substring(loc1).length();
         }
+        totLength-=(count-2);
         System.out.println("There are "+count+ " words in this sentence");
         System.out.println("The average length of the word is "+totLength/count);
         System.out.println("There are "+ totLength+ " chars in this sentence");
