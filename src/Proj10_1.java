@@ -8,11 +8,12 @@ public class Proj10_1 {
 
         ArrayList<Integer> evenList=new ArrayList<>();
         ArrayList<Integer> oddList=new ArrayList<>();
-
+        ArrayList<Integer> negativeList=new ArrayList<>();
         for(int i=0;i<10;i++){
             inputs[i]=in.nextInt();
             if(inputs[i]%2==0) evenList.add(inputs[i]);
             else oddList.add(inputs[i]);
+            if(inputs[i]<0) negativeList.add(inputs[i]);
         }
         System.out.print("The input list is: ");
         for(int i=0;i<10;i++){
@@ -26,6 +27,11 @@ public class Proj10_1 {
         System.out.println();
         System.out.print("The even list is: ");
         for(Integer i:evenList){
+            System.out.print(i+" ");
+        }
+        System.out.println();
+        System.out.print("The negative list is: ");
+        for(Integer i:negativeList){
             System.out.print(i+" ");
         }
 
